@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: red;
+}
+
+.search {
+    text-align: right;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+    background-color: darkgrey;
+    padding: 60px;
+
+    /* test */
+    height: 890px;
+}
+
+/* scheda film */
+
+.film {
+    background-color: black;
+    border: 1px solid white;
+    width: calc(( 100% / 6 ) - 100px);
+    display: inline-block;
+    padding: 5px;
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
+.infos {
+    color: white;
+}
