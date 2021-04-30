@@ -29,16 +29,26 @@
             <!-- film -->
             <div v-for="film in films" class="film">
                 <div class="infos">
-                    <div class="copertina">
+                    <!-- <div class="copertina">
                         <img :src="film.poster_path" alt="poster">
-                    </div>
+                    </div> -->
                     <h5>Titolo:</h5> {{ film.title }}
                     <h5>Titolo originale:</h5>{{ film.original_title }}
                     <h5>Voto:</h5> {{ film.vote_average }}
-                    <h5>Lingua:</h5> {{ film.original_language }}
+                    <h5>Lingua:</h5> {{ film.original_language }} <!--  <img src="https://images.emojiterra.com/google/android-11/128px/1f1ec-1f1e7.png alt="bandiera"> -->
+                    <!-- <h5>Overview:</h5> {{ film.overview }} -->
                 </div>
             </div>
             <!-- fine film -->
+
+            <div v-for="tvSerie in tvSeries" class="film">
+                <div class="infos">
+                    <h5>Titolo:</h5> {{ tvSerie.name }}
+                    <h5>Titolo originale:</h5>{{ tvSerie.original_name }}
+                    <h5>Voto:</h5> {{ tvSerie.vote_average }}
+                    <h5>Lingua:</h5> {{ tvSerie.original_language }}
+                </div>
+            </div>
 
         </main>
 
