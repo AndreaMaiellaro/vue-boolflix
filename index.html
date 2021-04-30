@@ -27,8 +27,11 @@
         <main>
 
             <!-- film -->
-            <div class="film">
-                <div v-for="film in films" class="infos">
+            <div v-for="film in films" class="film">
+                <div class="infos">
+                    <div class="copertina">
+                        <img :src="film.poster_path" alt="poster">
+                    </div>
                     <h5>Titolo:</h5> {{ film.title }}
                     <h5>Titolo originale:</h5>{{ film.original_title }}
                     <h5>Voto:</h5> {{ film.vote_average }}

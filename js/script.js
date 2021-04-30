@@ -13,6 +13,8 @@ var app = new Vue({
                 console.log(result);
                 this.films = result.results;
                 console.log(this.films);
+
+                console.log(this.films[0]);
             })
     }
 }) 
