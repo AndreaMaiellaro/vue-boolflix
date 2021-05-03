@@ -52,14 +52,14 @@ var app = new Vue({
                 })    
         },
 
-        bandiera() {
-            var bandiera = '';
-        `
-        <img :src="img/${film.original_language}.png" alt="bandiera">
-        `
+        // bandiera() {
+        //     var bandiera = '';
+        // `
+        // <img :src="img/${film.original_language}.png" alt="bandiera">
+        // `
 
-        document.getElementById('flag').innerHTML = bandiera;   
-        }
+        // document.getElementById('flag').innerHTML = bandiera;   
+        // }
 
         // filmFlag() {
         //     if (lang == 'it' || lang == 'en') {
