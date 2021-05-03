@@ -6,6 +6,10 @@
 
 /* header */
 
+body {
+    background-color: darkgrey;
+}
+
 header {
     background-color: black;
     padding: 20px;
@@ -34,11 +38,7 @@ button {
 /* main */
 
 main {
-    background-color: darkgrey;
     padding: 60px;
-
-    /* test */
-    height: 890px;
 }
 
 /* scheda film */

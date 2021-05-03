@@ -20,11 +20,11 @@
             <h1>BOOLFLIX</h1>
             <div class="search">
                 <input v-model="userResearch"
+                @keyup.enter="showFilmsSeries"
                 type="text"
                 placeholder="Inserisci il nome del film o serie tv">
-                <button @click="addNewResearch"
-                value="clickme" 
-                onClick="showFilmsSeries();">
+                <button @click="showFilmsSeries"
+                value="clickme">
                 Cerca
                 </button>
             </div>
