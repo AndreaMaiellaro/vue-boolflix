@@ -19,8 +19,14 @@
         <header>
             <h1>BOOLFLIX</h1>
             <div class="search">
-                <input v-model="userNewFilm" @keyup.enter="addNewFilm" type="text" placeholder="Inserisci il nome del film o serie tv">
-                <button @click="addNewFilm" >Cerca</button>
+                <input v-model="userResearch"
+                type="text"
+                placeholder="Inserisci il nome del film o serie tv">
+                <button @click="addNewResearch"
+                value="clickme" 
+                onClick="showFilmsSeries();">
+                Cerca
+                </button>
             </div>
         </header>
 
@@ -56,6 +62,6 @@
 
     </div>
 
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

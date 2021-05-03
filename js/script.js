@@ -3,22 +3,22 @@ var app = new Vue({
     data: {
         films: [],
         tvSeries: [],
-        userNewFilm: ''
+        userResearch: ''
     },
     methods: {
-        addNewFilm() {
-            if (this.userNewFilm.length > 0) {
-                this.films.push(this.userNewFilm)
-                this.userNewFilm = '';
+        addNewResearch() {
+            if (this.userResearch.length > 0) {
+                this.films.push(this.userResearch)
+                console.log(this.userResearch);
+                this.userResearch = '';
             }
         },
-    },
-    mounted() {
-        
+
+        showFilmsSeries() {
             axios
                 .get('https://api.themoviedb.org/3/search/movie?api_key=4049f8301925a2068e543ebc9f450c23&query=ritorno al futuro&language=it-IT&page=1', {
                     params: {
-                        'titolo': "ritorno al futuro",
+                        'titolo': "",
                         'lingua': "it-IT",
                         'pagina': 1,
                     }
@@ -31,17 +31,17 @@ var app = new Vue({
 
                     console.log('film', this.films[0]);
 
-                    // if (lang == 'it' || lang == 'en') {
+                    if (lang == 'it' || lang == 'en') {
 
-                    //     nomeImmagine = lang;
-                    // }else  {
-                    //     nomeImmagine = 'bandieraGenerica';
-                    // }
+                        nomeImmagine = lang;
+                    }else  {
+                        nomeImmagine = 'bandieraGenerica';
+                    }
 
-                    // var path = './img/' + nomeImmagine + '.png';
+                    var path = './img/' + nomeImmagine + '.png';
 
-                    // console.log(nomeImmagine)
-                    // console.log(path);
+                    console.log(nomeImmagine)
+                    console.log(path);
                 })
 
             axios
@@ -60,5 +60,9 @@ var app = new Vue({
 
                     console.log('serie tv', this.tvSeries[0]);
                 })    
+        }
+    },
+    mounted() {
+        
     }
 }) 
