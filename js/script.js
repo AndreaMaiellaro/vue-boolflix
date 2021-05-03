@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         films: [],
         tvSeries: [],
-        userResearch: ''
+        userResearch: '',
     },
     methods: {
         addNewResearch() {
@@ -50,6 +50,15 @@ var app = new Vue({
 
                     console.log('serie tv', this.tvSeries[0]);
                 })    
+        },
+
+        bandiera() {
+            var bandiera = '';
+        `
+        <img :src="img/${film.original_language}.png" alt="bandiera">
+        `
+
+        document.getElementById('flag').innerHTML = bandiera;   
         }
 
         // filmFlag() {
@@ -66,6 +75,6 @@ var app = new Vue({
         //     console.log(path);
         // }
     },
-    mounted() {        
+    mounted() {     
     }
 }) 
