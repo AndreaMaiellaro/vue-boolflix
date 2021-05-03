@@ -19,8 +19,8 @@
         <header>
             <h1>BOOLFLIX</h1>
             <div class="search">
-                <input type="text" placeholder="Inserisci il nome del film o serie tv">
-                <button>Cerca</button>
+                <input v-model="userNewFilm" @keyup.enter="addNewFilm" type="text" placeholder="Inserisci il nome del film o serie tv">
+                <button @click="addNewFilm" >Cerca</button>
             </div>
         </header>
 
@@ -41,6 +41,7 @@
             </div>
             <!-- fine film -->
 
+            <!-- serie tv -->
             <div v-for="tvSerie in tvSeries" class="film">
                 <div class="infos">
                     <h5>Titolo:</h5> {{ tvSerie.name }}
@@ -49,6 +50,7 @@
                     <h5>Lingua:</h5> {{ tvSerie.original_language }}
                 </div>
             </div>
+            <!-- fine serie tv -->
 
         </main>
 
