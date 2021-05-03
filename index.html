@@ -35,14 +35,16 @@
             <!-- film -->
             <div v-for="film in films" class="film">
                 <div class="infos">
-                    <!-- <div class="copertina">
-                        <img :src="film.poster_path" alt="poster">
-                    </div> -->
-                    <h5>Titolo:</h5> {{ film.title }}
-                    <h5>Titolo originale:</h5>{{ film.original_title }}
-                    <h5>Voto:</h5> {{ film.vote_average }}
-                    <h5>Lingua:</h5> {{ film.original_language }}
-                    <img `src="img/${film.original_language}.png"` alt="bandiera">
+                    <div class="align">
+                        <img class="copertina" :src="`https://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="poster">
+                    </div>
+                    <div class="specifiche">
+                        <h5>Titolo:</h5> {{ film.title }}
+                        <h5>Titolo originale:</h5>{{ film.original_title }}
+                        <h5>Voto:</h5> {{ film.vote_average }}
+                        <h5>Lingua:</h5>
+                        <img class="flag" :src="`img/${film.original_language}.png`" alt="bandiera">
+                    </div>
                     <!-- <h5>Overview:</h5> {{ film.overview }} -->
                 </div>
             </div>
@@ -51,10 +53,16 @@
             <!-- serie tv -->
             <div v-for="tvSerie in tvSeries" class="film">
                 <div class="infos">
-                    <h5>Titolo:</h5> {{ tvSerie.name }}
-                    <h5>Titolo originale:</h5>{{ tvSerie.original_name }}
-                    <h5>Voto:</h5> {{ tvSerie.vote_average }}
-                    <h5>Lingua:</h5> {{ tvSerie.original_language }}
+                    <div class="align">
+                        <img class="copertina" :src="`https://image.tmdb.org/t/p/w342/${tvSerie.poster_path}`" alt="poster">
+                    </div>
+                    <div class="specifiche">
+                        <h5>Titolo:</h5> {{ tvSerie.name }}
+                        <h5>Titolo originale:</h5>{{ tvSerie.original_name }}
+                        <h5>Voto:</h5> {{ tvSerie.vote_average }}
+                        <h5>Lingua:</h5>
+                        <img class="flag" :src="`img/${tvSerie.original_language}.png`" alt="bandiera">
+                    </div>
                 </div>
             </div>
             <!-- fine serie tv -->

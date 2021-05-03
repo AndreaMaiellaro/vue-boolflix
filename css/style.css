@@ -56,3 +56,29 @@ main {
 .infos {
     color: white;
 }
+
+.align {
+    text-align: center;
+}
+
+.specifiche {
+    display: none;
+}
+
+.infos:hover .specifiche {
+    display: inline-block;
+    height: 250px;
+}
+
+.infos:hover .copertina {
+    display: none;
+}
+
+.copertina {
+    width: 180px;
+    height: 250px;
+}
+
+.flag {
+    width: 20px;
+}
